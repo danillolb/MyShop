@@ -10,9 +10,9 @@ namespace MyShop.Core.Models
 {
     public class Product
     {
-        //annotations
+        
         public string Id { get; set; }
-
+        //annotations
         [StringLength(20)]
         [DisplayName("Product Name")]
         public string Name { get; set; }

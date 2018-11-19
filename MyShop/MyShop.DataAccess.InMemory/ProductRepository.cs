@@ -11,11 +11,13 @@ namespace MyShop.DataAccess.InMemory
     //this project is meant to manipulate data from the shop inside the memory ( CACHE ) - volatile information
     public class ProductRepository
     {
+        //this variable holds information in memory with a identifier
         ObjectCache cache = MemoryCache.Default;
         List<Product> products;
 
         public ProductRepository()
         {
+            //the product list now holds the cache variable
             products = cache["products"] as List<Product>;
 
             if(products == null)
